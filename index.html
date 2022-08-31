@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS CIRCLE TIMER</title>
+    <meta name="keywords" content="タイマー,円グラフ,CSS">
+    <meta name="description" content="CSSを使用して作成した円グラフのタイマーです。">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="page-title">CSS CIRCLE TIMER</h1>
+        <p class="u-mb-20">
+            CSSを使用して作成した円グラフのタイマーです。タイマー終了時に音は出ません。
+        </p>
+        <div class="u-mb-20">
+            <div id="js-time-limit-set">
+                <div class="time-limit-set__change">
+                    <div class="time-limit-set__change-item">
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="36000">+10h</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="3600">+1h</button>
+                        <div><span class="time-limit-set__change-item-text" id="js-time-limit-hour-text">00</span> h</div>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-3600">-1h</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-36000">-10h</button>
+                    </div>
+                    <div class="time-limit-set__change-item">
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="600">+10m</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="60">+1m</button>
+                        <div><span class="time-limit-set__change-item-text" id="js-time-limit-minute-text">00</span> m</div>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-60">-1m</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-600">-10m</button>
+                    </div>
+                    <div class="time-limit-set__change-item">
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="10">+10s</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="1">+1s</button>
+                        <div><span class="time-limit-set__change-item-text" id="js-time-limit-second-text">00</span> s</div>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-1">-1s</button>
+                        <button type="button" class="button time-limit-set__change-item-button js-time-limit-change-button" data-seconds="-10">-10s</button>
+                    </div>
+                </div>
+                <div class="time-limit-set__bottom-button-wrapper">
+                    <button type="button" class="button time-limit-set__reset-button" id="js-time-limit-reset-button">reset</button>
+                    <button type="button" class="button time-limit-set__set-button" id="js-time-limit-set-button"></button>
+                </div>
+            </div>
+            <div id="js-circle-timer" style="display: none;">
+                <button type="button" class="button circle-timer__back-button" id="js-back-button">←</button>
+                <div>
+                    <div class="circle-timer__circle" id="js-remaining-time">00 h 00 m 00 s 000</div>
+                    <div class="circle-timer__button-wrapper">
+                        <button id="js-start-button" class="button circle-timer__start-button" type="button"></button>
+                        <button id="js-stop-button" class="button circle-timer__stop-button" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright"><span style="font-family:'Times New Roman', 'Times';">&copy;</span> 2022 nt1121</div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
