@@ -56,12 +56,8 @@ function updateRemeiningTimeDisplay() {
     if (remainingTime === 0) {
         remainingTimeCircle.style.backgroundImage = 'radial-gradient(#fff 0% 60%, transparent 60% 100%), conic-gradient(#E60012 0% 0%, #DCDDDD 0% 100%)';
     } else {
-        const percentage1 = Math.floor(remainingTime / (timeLimit * 1000) * 1000) / 10;
-        let percentage2 = percentage1 + 0.2;
-        if (100 < percentage2) {
-            percentage2 = 100;
-        }
-        remainingTimeCircle.style.backgroundImage = 'radial-gradient(#fff 0% 60%, transparent 60% 100%), conic-gradient(#E60012 0% ' + percentage1 + '%, #DCDDDD ' + percentage2 + '% 100%)';
+        const percentage = Math.floor(remainingTime / (timeLimit * 1000) * 1000) / 10;
+        remainingTimeCircle.style.backgroundImage = 'radial-gradient(#fff 0% 60%, transparent 60% 100%), conic-gradient(#E60012 0% ' + percentage + '%, #DCDDDD ' + percentage + '% 100%)';
     }
     // 残り時間がゼロになった場合はタイマーを終了する
     if (remainingTime === 0) {
